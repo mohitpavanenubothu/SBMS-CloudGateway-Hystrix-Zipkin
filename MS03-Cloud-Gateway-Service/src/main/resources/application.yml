@@ -1,0 +1,15 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: SHOPPING-SERVICE
+          uri: lb://SHOPPING-SERVICE
+          predicates:
+          - Path= /shopping/**
+
+          

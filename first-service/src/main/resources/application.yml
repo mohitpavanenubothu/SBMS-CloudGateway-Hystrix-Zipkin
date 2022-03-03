@@ -1,0 +1,10 @@
+server:
+  port: 8086
+ 
+spring:
+  application:
+    name: first-service
+    
+logging:
+  file:
+    name: D:\logs\sbms2.log

@@ -1,0 +1,19 @@
+server:
+  port: 9090
+ 
+spring:
+  application:
+    name: Gateway-Service
+    
+  cloud:
+    gateway:
+      routes:
+      - id: employeeModule
+        uri: http://localhost:8086/
+        predicates:
+        - Path=/employee/**
+        
+      - id: consumerModule
+        uri: http://localhost:8085/
+        predicates:
+        - Path=/consumer/**

@@ -1,0 +1,20 @@
+server:
+  port: 8085
+  
+spring:
+  application:
+    name: second-service
+    
+logging:
+  file:
+    name: D:\logs\sbms2.log
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
